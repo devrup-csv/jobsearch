@@ -98,7 +98,7 @@ while x!=0:
                     if int(d["experience_lower"])<=6 and int(d["salary_lower"])>=500000:
                         
                         try:
-                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor reviews")
+                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor jobss")
                             soup5=BeautifulSoup(r.text,'html.parser')
                             rating=float(re.sub("[()]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[1])))
                             people=int(re.sub("[(),]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[2])))
@@ -109,7 +109,7 @@ while x!=0:
                                 rating=float(re.sub("[()]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[1])))
                                 people=int(re.sub("[(),]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[2])))
                             except:
-                                driver.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor reviews")
+                                driver.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor jobss")
                                 soup5=BeautifulSoup(driver.page_source,'html.parser')
                                 soup6=soup5.find_all("div",{"class":"g"})[1].find("div",{"class","dhIWPd f"}).text
                                 rating=float(re.sub("[A-Za-z\u200e]","",soup6).split()[1])
@@ -125,7 +125,7 @@ while x!=0:
                 try:
                     if gem!=1:
                         try:
-                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor reviews")
+                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor jobss")
                             soup5=BeautifulSoup(r.text,'html.parser')
                             rating=float(re.sub("[()]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[1])))
                             people=int(re.sub("[(),]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[2])))
@@ -138,7 +138,7 @@ while x!=0:
                                 people=int(re.sub("[(),]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[2])))
                                 normal_list.append(d["company_name"])
                             except:
-                                driver.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor reviews")
+                                driver.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor jobss")
                                 soup5=BeautifulSoup(driver.page_source,'html.parser')
                                 soup6=soup5.find_all("div",{"class":"g"})[1].find("div",{"class","dhIWPd f"}).text
                                 rating=float(re.sub("[A-Za-z\u200e]","",soup6).split()[1])
@@ -209,9 +209,9 @@ while x!=0:
             if gem>=1 and str(d["company_name"]) not in company_post:
                 gem_list.append(d["company_name"])
                 try:
-                    d["linkedin_post"]="#hiringalert #covid19 #bschools #freshposts #glassdoorreviews #recruitment2020"+"\n"+str(d["company_name"])+" is hiring for "+str(d["Role"])+" with a minimum experience of "+str(d["experience"])+". Minimum salary offered is "+str(d["salary_lcs"])+"lpa. This company is rated "+str(d["glassdoor_ratings"])+" at glassdoor by "+str(d["people_rated"])+" people. Click on the given link to apply::\n"+str(d["link_post"])+"\nPlease share this post as much as possible, and like or comment so that a needy person may be able to see it.  #helpinghand #jobseeker #automation #jobs #"+str(d["role_hash1"])+" #"+str(d["role_hash2"])+" #hiring #jobvengers #analytics #"+str(d["name_hash"])
+                    d["linkedin_post"]="#hiringalert #covid19 #bschools #freshposts #glassdoorjobss #recruitment2020"+"\n"+str(d["company_name"])+" is hiring for "+str(d["Role"])+" with a minimum experience of "+str(d["experience"])+". Minimum salary offered is "+str(d["salary_lcs"])+"lpa. This company is rated "+str(d["glassdoor_ratings"])+" at glassdoor by "+str(d["people_rated"])+" people. Click on the given link to apply::\n"+str(d["link_post"])+"\nPlease share this post as much as possible, and like or comment so that a needy person may be able to see it.  #helpinghand #jobseeker #automation #jobs #"+str(d["role_hash1"])+" #"+str(d["role_hash2"])+" #hiring #jobvengers #analytics #"+str(d["name_hash"])
                 except:
-                    d["linkedin_post"]="#hiringalert\nHola fellow Jobvengers. "+str(d["company_name"])+" is recruiting and are looking for skills in "+str(d["skill_tag 1"])+" "+str(d["skill_tag 2"])+" with a minimum experience of "+str(d["experience"])+". This company is rated "+str(d["glassdoor_ratings"])+" at Glassdoor by "+str(d["people_rated"])+" people. Click on the given link to apply\n "+str(d["link_post"])+"\nPlease SHARE this post as much as possible, and LIKE or COMMENT so that a needy person may be able to see it. \n #freshjobs #covid19 #analytics #bschools #freshposts #glassdoorreviews #recruitment2020 #hireme #lookingforjobchange #lookingforajob #jobhunting #helpinghand #jobseeker #automation #jobs #hiring #jobvengers #"+str(d["name_hash"])
+                    d["linkedin_post"]="#hiringalert\nHola fellow Jobvengers. "+str(d["company_name"])+" is recruiting and are looking for skills in "+str(d["skill_tag 1"])+" "+str(d["skill_tag 2"])+" with a minimum experience of "+str(d["experience"])+". This company is rated "+str(d["glassdoor_ratings"])+" at Glassdoor by "+str(d["people_rated"])+" people. Click on the given link to apply\n "+str(d["link_post"])+"\nPlease SHARE this post as much as possible, and LIKE or COMMENT so that a needy person may be able to see it. \n #freshjobs #covid19 #analytics #bschools #freshposts #glassdoorjobss #recruitment2020 #hireme #lookingforjobchange #lookingforajob #jobhunting #helpinghand #jobseeker #automation #jobs #hiring #jobvengers #"+str(d["name_hash"])
                 g.append(d)
                 driver.switch_to.window(driver.window_handles[1])
                 try:
@@ -390,7 +390,7 @@ while x!=0:
                     if int(d["salary_lower"])>=500000:
                         d["salary_lcs"]=int(int(d["salary_lower"])/100000)
                         try:
-                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor reviews")
+                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor jobss")
                             soup5=BeautifulSoup(r.text,'html.parser')
                             rating=re.sub("[()]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[1]))
                             people=re.sub("[(),]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[2]))
@@ -409,7 +409,7 @@ while x!=0:
                 try:
                     if gem!=1:
                         try:
-                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor reviews")
+                            r=requests.get("https://www.google.com/search?q="+str(d["company_name"])+" glassdoor jobss")
                             soup5=BeautifulSoup(r.text,'html.parser')
                             rating=re.sub("[()]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[1]))
                             people=re.sub("[(),]","",str(soup5.find("div",{"class":"BNeawe s3v9rd AP7Wnd"}).text.split()[2]))
@@ -447,9 +447,9 @@ while x!=0:
             if gem>=1:
                 gem_list.append(d["company_name"])
                 try:
-                    d["linkedin_post"]="#hiringalert #operationsjobs #covid19 #bschools #freshposts #glassdoorreviews #recruitment2020"+"\n"+str(d["company_name"])+" is hiring for "+str(d["role"])+" with a minimum experience of "+str(d["experience"])+".Minimum salary offered is "+str(d["salary_lcs"])+"lpa.This company is rated "+str(d["glassdoor_ratings"])+" at glassdoor by "+str(d["people_rated"])+"\n people.Click on the given link to apply "+str(d["link_post"])+" Please share this post as much as possible, and like or comment so that a needy person may be able to see it.  #helpinghand #jobseeker #automation #jobs #hiring #jobvengers #analytics #"+str(d["name_hash"])+" #"+str(d["role_hash"])
+                    d["linkedin_post"]="#hiringalert #operationsjobs #covid19 #bschools #freshposts #glassdoorjobss #recruitment2020"+"\n"+str(d["company_name"])+" is hiring for "+str(d["role"])+" with a minimum experience of "+str(d["experience"])+".Minimum salary offered is "+str(d["salary_lcs"])+"lpa.This company is rated "+str(d["glassdoor_ratings"])+" at glassdoor by "+str(d["people_rated"])+"\n people.Click on the given link to apply "+str(d["link_post"])+" Please share this post as much as possible, and like or comment so that a needy person may be able to see it.  #helpinghand #jobseeker #automation #jobs #hiring #jobvengers #analytics #"+str(d["name_hash"])+" #"+str(d["role_hash"])
                 except:
-                    d["linkedin_post"]="#hiringalert #operationsjobs\nHola fellow Jobvengers. "+str(d["company_name"])+" is recruiting for "+str(d["role"])+". This company is rated "+str(d["glassdoor_ratings"])+" at Glassdoor by "+str(d["people_rated"])+" people. Click on the given link to apply\n "+str(d["link_post"])+"\nPlease SHARE this post as much as possible, and LIKE or COMMENT so that a needy person may be able to see it. \n #freshjobs #covid19 #analytics #bschools #freshposts #glassdoorreviews #recruitment2020 #hireme #lookingforjobchange #lookingforajob #jobhunting #helpinghand #jobseeker #automation #jobs #hiring #jobvengers #"+str(d["name_hash"])+" #"+str(d["role_hash"])
+                    d["linkedin_post"]="#hiringalert #operationsjobs\nHola fellow Jobvengers. "+str(d["company_name"])+" is recruiting for "+str(d["role"])+". This company is rated "+str(d["glassdoor_ratings"])+" at Glassdoor by "+str(d["people_rated"])+" people. Click on the given link to apply\n "+str(d["link_post"])+"\nPlease SHARE this post as much as possible, and LIKE or COMMENT so that a needy person may be able to see it. \n #freshjobs #covid19 #analytics #bschools #freshposts #glassdoorjobss #recruitment2020 #hireme #lookingforjobchange #lookingforajob #jobhunting #helpinghand #jobseeker #automation #jobs #hiring #jobvengers #"+str(d["name_hash"])+" #"+str(d["role_hash"])
                 g.append(d)
                 driver.switch_to.window(driver.window_handles[1])
                 try:
@@ -524,7 +524,7 @@ X=df.jd
 mask = np.array(Image.open(r'/GD/My Drive/calci/jobs2.jpg'))
 # plt.imshow(mask)
 # plt.axis("off")
-stop_words = ["i", "me","business","customer","program","employee","using","position","candidate","review","understanding","identify","related","organization","new","understand","delivery","report","market","design","platform","develop","manage","organiation","tech""understanding","partner","need","activity","plan","good","role","working","based","work","drive","within","various","ability","ensure","application","including","year","required","development","industry","product","knowledge","provide","process","company","service","requirement","solution","etc","project","client","my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the","Mr", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
+stop_words = ["i", "me","business","customer","program","employee","using","position","candidate","jobs","understanding","identify","related","organization","new","understand","delivery","report","market","design","platform","develop","manage","organiation","tech""understanding","partner","need","activity","plan","good","role","working","based","work","drive","within","various","ability","ensure","application","including","year","required","development","industry","product","knowledge","provide","process","company","service","requirement","solution","etc","project","client","my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the","Mr", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
 def remove_stopwords(text):
     word_list = text.split()
     word_list = [word for word in word_list if word not in stop_words]
@@ -532,23 +532,23 @@ def remove_stopwords(text):
     return text
 corpus=[]
 for i in range(0,len(X)):
-    review=re.sub(r'\W',' ',str(X[i]))
-    review=review.lower()
-    review=re.sub(r'\s+[a-z]\s+',' ',review)
-    review=re.sub(r'^[a-z]\s+',' ',review)
-    review=re.sub(r'\s+',' ',review)
-    review=re.sub(r"^http://t.co/[a-zA-Z0-9]*\s"," ",review)
-    review=re.sub(r"\s+http://t.co/[a-zA-Z0-9]*\s"," ",review)
-    review=re.sub(r"\s+http://t.co/[a-zA-Z0-9]*$"," ",review)
-    review=re.sub(r"\d"," ",review)
+    jobs=re.sub(r'\W',' ',str(X[i]))
+    jobs=jobs.lower()
+    jobs=re.sub(r'\s+[a-z]\s+',' ',jobs)
+    jobs=re.sub(r'^[a-z]\s+',' ',jobs)
+    jobs=re.sub(r'\s+',' ',jobs)
+    jobs=re.sub(r"^http://t.co/[a-zA-Z0-9]*\s"," ",jobs)
+    jobs=re.sub(r"\s+http://t.co/[a-zA-Z0-9]*\s"," ",jobs)
+    jobs=re.sub(r"\s+http://t.co/[a-zA-Z0-9]*$"," ",jobs)
+    jobs=re.sub(r"\d"," ",jobs)
     lemmer=WordNetLemmatizer()
-    ww=nltk.word_tokenize(review)
+    ww=nltk.word_tokenize(jobs)
     ww=[word for word in ww if word not in stopwords.words('english')]
     newwords=[lemmer.lemmatize(word) for word in ww]
     #     newwords=[stemmer.stem(word) for word in ww]
-    review=' '.join(newwords)
-    review=remove_stopwords(review)
-    corpus.append(review)
+    jobs=' '.join(newwords)
+    jobs=remove_stopwords(jobs)
+    corpus.append(jobs)
 text=""
 for item in corpus:
   text=text+item    
